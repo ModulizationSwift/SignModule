@@ -8,9 +8,10 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
 
-    override func viewDidLoad() {
+public class LoginViewController: UIViewController {
+
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
     }
