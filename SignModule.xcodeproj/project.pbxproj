@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAACF83C1EFD667400F039C9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAACF83B1EFD667400F039C9 /* LoginViewController.swift */; };
 		AAF0E3681EFD216300AB75C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0E3671EFD216300AB75C1 /* AppDelegate.swift */; };
 		AAF0E36A1EFD216300AB75C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0E3691EFD216300AB75C1 /* ViewController.swift */; };
 		AAF0E36D1EFD216300AB75C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF0E36B1EFD216300AB75C1 /* Main.storyboard */; };
 		AAF0E36F1EFD216300AB75C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF0E36E1EFD216300AB75C1 /* Assets.xcassets */; };
 		AAF0E3721EFD216300AB75C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAF0E3701EFD216300AB75C1 /* LaunchScreen.storyboard */; };
-		AAF0E37B1EFD21E500AB75C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF0E37A1EFD21E500AB75C1 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAACF83B1EFD667400F039C9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AAF0E3641EFD216300AB75C1 /* SignModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF0E3671EFD216300AB75C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAF0E3691EFD216300AB75C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +24,6 @@
 		AAF0E36E1EFD216300AB75C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAF0E3711EFD216300AB75C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAF0E3731EFD216300AB75C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAF0E37A1EFD21E500AB75C1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +37,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAACF83A1EFD667400F039C9 /* SignModule */ = {
+			isa = PBXGroup;
+			children = (
+				AAACF83B1EFD667400F039C9 /* LoginViewController.swift */,
+			);
+			name = SignModule;
+			path = SignModule/SignModule;
+			sourceTree = "<group>";
+		};
 		AAF0E35B1EFD216300AB75C1 = {
 			isa = PBXGroup;
 			children = (
-				AAF0E3791EFD219000AB75C1 /* Sign */,
+				AAACF83A1EFD667400F039C9 /* SignModule */,
 				AAF0E3661EFD216300AB75C1 /* SignModule */,
 				AAF0E3651EFD216300AB75C1 /* Products */,
 			);
@@ -65,14 +74,6 @@
 				AAF0E3731EFD216300AB75C1 /* Info.plist */,
 			);
 			path = SignModule;
-			sourceTree = "<group>";
-		};
-		AAF0E3791EFD219000AB75C1 /* Sign */ = {
-			isa = PBXGroup;
-			children = (
-				AAF0E37A1EFD21E500AB75C1 /* LoginViewController.swift */,
-			);
-			path = Sign;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF0E37B1EFD21E500AB75C1 /* LoginViewController.swift in Sources */,
+				AAACF83C1EFD667400F039C9 /* LoginViewController.swift in Sources */,
 				AAF0E36A1EFD216300AB75C1 /* ViewController.swift in Sources */,
 				AAF0E3681EFD216300AB75C1 /* AppDelegate.swift in Sources */,
 			);
@@ -316,6 +317,7 @@
 				AAF0E3781EFD216300AB75C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
