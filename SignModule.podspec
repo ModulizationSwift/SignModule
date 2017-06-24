@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SignModule"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "SignModule."
 
   # This description is used to generate tags and improve search results.
@@ -53,10 +53,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "CasaTaloyum" => "casatwy@msn.com" }
-  # Or just: s.author    = "CasaTaloyum"
-  # s.authors            = { "CasaTaloyum" => "casatwy@msn.com" }
-  # s.social_media_url   = "http://twitter.com/CasaTaloyum"
+  s.author             = { "CNKCQ" => "wangchengqvan@gmail.com" }
+  # Or just: s.author    = "CNKCQ"
+  # s.authors            = { "CNKCQ" => "wangchengqvan@gmail.com" }
+  # s.social_media_url   = "http://twitter.com/Steve King"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -91,7 +91,29 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "SignModule/SignModule/**/*.{h,m,swift}"
+  $lib = ENV['use_lib']
+  $lib_name = ENV["#{s.name}_use_lib"]
+  if $lib || $lib_name
+     puts '---------binary-------'
+     s.ios.vendored_framework = "Framework/#{s.version}/#{s.name}.framework"
+    #  这种是帮你打包成bundle
+    #  s.resource_bundles = {
+    #    "#{s.name}" => ["#{s.name}/Assets/*.{png,xib,plist}"]
+    #  }
+    #  这种是你已经打包好了bundle，推荐这种，可以省去每次pod帮你生成bundle的时间
+     s.resources = "#{s.name}/Assets/*.bundle"
+  else
+     puts '.......source........'
+     s.source_files = "#{s.name}/SignModule/**/*"
+    #  s.resources = "#{s.name}/Assets/*.bundle"
+    #  s.public_header_files = "#{s.name}/Classes/**/*.h"
+  end
+
+
+  s.preserve_paths = "#{s.name}/Classes/**/*","#{s.name}/Assets/*.{png,xib,plist}","Framework/#{s.version}/#{s.name}.framework"
+
+
+  # s.source_files  = "SignModule/SignModule/**/*.{h,m,swift}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
