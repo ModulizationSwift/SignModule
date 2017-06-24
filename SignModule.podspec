@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
   end
 
 
-  s.preserve_paths = "#{s.name}/Classes/**/*","#{s.name}/Assets/*.{png,xib,plist}","Framework/#{s.version}/#{s.name}.framework"
+  s.preserve_paths = "#{s.name}/SignModule/**/*","#{s.name}/Assets/*.{png,xib,plist}","Framework/#{s.version}/#{s.name}.framework"
 
 
   # s.source_files  = "SignModule/SignModule/**/*.{h,m,swift}"
